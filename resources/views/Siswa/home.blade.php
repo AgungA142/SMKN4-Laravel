@@ -62,7 +62,13 @@
                 <td>{{ $item->nama }}</td>
                 <td>{{ $item->alamat}}</td>
                 <td>
+                  <form action="/hapusData/{{ $item->id }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <input type="hidden" name="id" value="{{ $item->id }}">
                     <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+
+                  </form>
                     <button type="submit" class="btn btn-warning btn-sm">Ubah</button>
                 </td>
               </tr>

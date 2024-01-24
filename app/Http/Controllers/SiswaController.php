@@ -28,4 +28,11 @@ class SiswaController extends Controller
 
         return redirect('/beranda');
     }
+
+    function hapusData($id) {
+        $siswa = Siswa::find($id);
+        $siswa -> delete();
+
+        return back();
+    }
 }

@@ -21,3 +21,4 @@ Route::get('/', function () {
 Route::get('/beranda', [SiswaController::class, 'daftarSiswa']);
 Route::get('/tambah-siswa', [SiswaController::class, 'tambahSiswa']);
 Route::post('/tambah-data', [SiswaController::class, 'tambahData']);
+Route::delete('/hapusData/{id}', [SiswaController::class, 'hapusData']);
